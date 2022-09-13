@@ -1,5 +1,5 @@
 ---
-title: "Tutorial"
+title: "10 Quick Questions From LIFE101"
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -8,7 +8,24 @@ runtime: shiny_prerendered
 library(learnr)
 library(LIFE101)
 knitr::opts_chunk$set(echo = FALSE)
-questions <- LIFE101::questions
+data(questions)
 ```
 
+
+```{r}
+x <- questions[sample(nrow(questions),10),]
+
+y <- paste("quiz(caption = \"Ten questions\"",
+           x$code[[1]],x$code[[2]],x$code[[3]],x$code[[4]],
+           x$code[[5]],x$code[[6]],x$code[[7]],x$code[[8]],
+           x$code[[9]],x$code[[10]],
+           sep = ",")
+y <- paste(y,")")
+
+```
+
+
+```{r test}
+eval(parse(text = y))
+```
 
