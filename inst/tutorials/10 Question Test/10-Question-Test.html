@@ -14,7 +14,7 @@
 <meta name="allow-skip" content="false" />
 <meta name="learnr-version-prerender" content="0.10.1.9019" />
 
-<title>10 Quick Questions From LIFE101</title>
+<title>10 Question Test</title>
 
 <!-- header-includes START -->
 <!-- header-includes END -->
@@ -107,6 +107,15 @@ if (window.hljs) {
 
 <div class="topics">
 
+<div id="section-how-to-use-this-tool" class="section level2">
+<h2>How to use this tool</h2>
+<p>Please note that questions are student written and not thoroughly
+checked for errors. As such, some questions may be unclear or contain
+mistakes. You are strongly encouraged to check your answers back against
+your notes and other course material. Not only will this be good
+revision as you will be forced to critically appraise the questions, but
+you can also report any suspected errors to the Module organiser at <a
+href="mailto:cmitch@liv.ac.uk">cmitch@liv.ac.uk</a>.</p>
 <div class="panel-heading tutorial-quiz-title">Ten questions</div>
 <div class="panel panel-default">
 <div data-label="test-1" class="tutorial-question panel-body">
@@ -193,6 +202,12 @@ if (window.hljs) {
 library(learnr)
 library(LIFE101)
 knitr::opts_chunk$set(echo = FALSE)
+options(tutorial.storage = list(
+  save_object = function(...) { },
+  get_object = function(...) NULL,
+  get_objects = function(...) list(),
+  remove_all_objects = function(...) { }
+))
 data(questions)
 </script>
  
@@ -217,26 +232,31 @@ session$onSessionEnded(function() {
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-1", question = structure("A tRNA brings over an amino acid, leucine, with an anticodon GAA. Which of the following statements is correct.", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_dd9e24c", 
-    option = "The codon on the sense strand that codes for leucine is CUU", 
-    value = "The codon on the sense strand that codes for leucine is CUU", 
-    label = structure("The codon on the sense strand that codes for leucine is CUU", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-1", question = structure("Which of the following isnot an animal cell junction.", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_95313a1", 
+    option = "Tight junction - sealing neighbouring cells together preventing leakage between cells", 
+    value = "Tight junction - sealing neighbouring cells together preventing leakage between cells", 
+    label = structure("Tight junction - sealing neighbouring cells together preventing leakage between cells", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e675c13", 
-    option = "The codon on the template strand that codes for leucine is GAA", 
-    value = "The codon on the template strand that codes for leucine is GAA", 
-    label = structure("The codon on the template strand that codes for leucine is GAA", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a02db88", 
+    option = "Plasmodesmata - channels which enable transport and communication between cells", 
+    value = "Plasmodesmata - channels which enable transport and communication between cells", 
+    label = structure("Plasmodesmata - channels which enable transport and communication between cells", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_271f99c", 
-    option = "The codon on the template strand that codes for leucine is CTT", 
-    value = "The codon on the template strand that codes for leucine is CTT", 
-    label = structure("The codon on the template strand that codes for leucine is CTT", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9c649b5", 
+    option = "Adherens junction - joins actin bundles in one cell with actin bundles in a neighbouring cells", 
+    value = "Adherens junction - joins actin bundles in one cell with actin bundles in a neighbouring cells", 
+    label = structure("Adherens junction - joins actin bundles in one cell with actin bundles in a neighbouring cells", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1d5990e", 
-    option = "The codon on the template strand that codes for leucine is CUU", 
-    value = "The codon on the template strand that codes for leucine is CUU", 
-    label = structure("The codon on the template strand that codes for leucine is CUU", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b2348ca", 
+    option = "Desmosomes - connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell.", 
+    value = "Desmosomes - connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell.", 
+    label = structure("Desmosomes - connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell.", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f0588c9", 
+    option = "gap junction - water-filled channels that connect the cytoplasm of one cell with that if a neighbouring cell.", 
+    value = "gap junction - water-filled channels that connect the cytoplasm of one cell with that if a neighbouring cell.", 
+    label = structure("gap junction - water-filled channels that connect the cytoplasm of one cell with that if a neighbouring cell.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -244,29 +264,26 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-1-answer", question = "test-1"), loading = structure("<strong>Loading:<\u002fstrong> \nA tRNA brings over an amino acid, leucine, with an anticodon GAA. Which of the following statements is correct.\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-1-answer", question = "test-1"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following isnot an animal cell junction.\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1896571507.61684, options = list()), class = c("learnr_radio", 
+    seed = 1646370524.73335, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-2", question = structure("The diagram shows a simplistic view of four animal cells and provides information about the water potential of each and the extracellular area around them.Please select which of the following statements are correct:A. Cell 1 is hypertonic to Cell 3 and Cell 4B. Water will move into Cell 4 by osmosisC. Water will move into all cells from surrounding medium by osmosisD. Cell 3 is hypotonic to cell 1 but hypertonic to cell 2E. Water will move from cells into surrounding medium by osmosisF. Cell 2 is isotonic with the surrounding medium", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_a222506", 
-    option = "A and F", value = "A and F", label = structure("A and F", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-2", question = structure("Which of the following, is the name for the protein which forms gap junctions?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_91b6063", 
+    option = "Cadherin", value = "Cadherin", label = structure("Cadherin", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f71f9c6", 
-    option = "A and C", value = "A and C", label = structure("A and C", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7634933", 
+    option = "Claudin", value = "Claudin", label = structure("Claudin", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_6843a73", 
-    option = "B, D and F", value = "B, D and F", label = structure("B, D and F", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_72f9397", 
+    option = "Connexon", value = "Connexon", label = structure("Connexon", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d0d8691", 
-    option = "C, A and E", value = "C, A and E", label = structure("C, A and E", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f4cc4a", 
-    option = "B and F", value = "B and F", label = structure("B and F", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f45ac0", 
+    option = "Occludin", value = "Occludin", label = structure("Occludin", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -274,92 +291,30 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-2-answer", question = "test-2"), loading = structure("<strong>Loading:<\u002fstrong> \nThe diagram shows a simplistic view of four animal cells and provides information about the water potential of each and the extracellular area around them.Please select which of the following statements are correct:A. Cell 1 is hypertonic to Cell 3 and Cell 4B. Water will move into Cell 4 by osmosisC. Water will move into all cells from surrounding medium by osmosisD. Cell 3 is hypotonic to cell 1 but hypertonic to cell 2E. Water will move from cells into surrounding medium by osmosisF. Cell 2 is isotonic with the surrounding medium\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-2-answer", question = "test-2"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following, is the name for the protein which forms gap junctions?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 244556844.886119, options = list()), class = c("learnr_radio", 
-"tutorial_question")), session = session)
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-3", question = structure("which of the following is not one of the main types of cell junctions in animal cells?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_11687ff", 
-    option = "gap junctions", value = "gap junctions", label = structure("gap junctions", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9fbc6b5", 
-    option = "tight junctions", value = "tight junctions", label = structure("tight junctions", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f1fe7e1", 
-    option = "desmosomes", value = "desmosomes", label = structure("desmosomes", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_854c26a", 
-    option = "plasmodesma", value = "plasmodesma", label = structure("plasmodesma", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d390db7", 
-    option = "adherens junction", value = "adherens junction", 
-    label = structure("adherens junction", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-3-answer", question = "test-3"), loading = structure("<strong>Loading:<\u002fstrong> \nwhich of the following is not one of the main types of cell junctions in animal cells?\n<br/><br/><br/>", html = TRUE, class = c("html", 
-"character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 163464297.923881, options = list()), class = c("learnr_radio", 
-"tutorial_question")), session = session)
-</script>
-
-
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-4", question = structure("Which one of the following statements below can best explain the importance of the negatively and positively charged ends on actin filaments (F-actin)?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_144b3a0", 
-    option = "Allows the dissociation G-actin monomers on the positive end and the polymerisation of G-actin monomers on the negative end", 
-    value = "Allows the dissociation G-actin monomers on the positive end and the polymerisation of G-actin monomers on the negative end", 
-    label = structure("Allows the dissociation G-actin monomers on the positive end and the polymerisation of G-actin monomers on the negative end", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_518903f", 
-    option = "Forms polar actin filaments which allows myosin and F-actin to move relative to each other during contraction", 
-    value = "Forms polar actin filaments which allows myosin and F-actin to move relative to each other during contraction", 
-    label = structure("Forms polar actin filaments which allows myosin and F-actin to move relative to each other during contraction", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_24bec68", 
-    option = "Ensures elongation of F-actin is maintained through constant dissociation and polymerisation of G-actin monomers", 
-    value = "Ensures elongation of F-actin is maintained through constant dissociation and polymerisation of G-actin monomers", 
-    label = structure("Ensures elongation of F-actin is maintained through constant dissociation and polymerisation of G-actin monomers", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_56a68e9", 
-    option = "Positive and negative ends on F-actin filaments interact to form strong bonds which maintain their structure", 
-    value = "Positive and negative ends on F-actin filaments interact to form strong bonds which maintain their structure", 
-    label = structure("Positive and negative ends on F-actin filaments interact to form strong bonds which maintain their structure", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-4-answer", question = "test-4"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich one of the following statements below can best explain the importance of the negatively and positively charged ends on actin filaments (F-actin)?\n<br/><br/><br/>", html = TRUE, class = c("html", 
-"character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1652816613.23035, options = list()), class = c("learnr_radio", 
+    seed = 1239494608.42282, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-5", question = structure("What is an antagonist ligand?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_a3c3eb0", 
-    option = "A molecule that binds to the receptor causing a conformational change, activating a biochemical response in the target cell.", 
-    value = "A molecule that binds to the receptor causing a conformational change, activating a biochemical response in the target cell.", 
-    label = structure("A molecule that binds to the receptor causing a conformational change, activating a biochemical response in the target cell.", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-3", question = structure("Which of these different types of vesicle are found only in certain prokaryotic organisms?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_ec4e5a", 
+    option = "Lysosomes", value = "Lysosomes", label = structure("Lysosomes", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_61efe23", 
-    option = "A molecule that binds to the receptor however does not initiate a response.", 
-    value = "A molecule that binds to the receptor however does not initiate a response.", 
-    label = structure("A molecule that binds to the receptor however does not initiate a response.", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5a65c34", 
+    option = "Gas Vesicles", value = "Gas Vesicles", label = structure("Gas Vesicles", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_46a189f", 
-    option = "An activated hormone-receptor complex.", value = "An activated hormone-receptor complex.", 
-    label = structure("An activated hormone-receptor complex.", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_64dc552", 
+    option = "Vacuoles", value = "Vacuoles", label = structure("Vacuoles", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f98f53c", 
+    option = "Transport Vesicles", value = "Transport Vesicles", 
+    label = structure("Transport Vesicles", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7b539f3", 
+    option = "Secretory Vesicles", value = "Secretory Vesicles", 
+    label = structure("Secretory Vesicles", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -367,26 +322,29 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-5-answer", question = "test-5"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is an antagonist ligand?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-3-answer", question = "test-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of these different types of vesicle are found only in certain prokaryotic organisms?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 318002942.851918, options = list()), class = c("learnr_radio", 
+    seed = 1942866337.59528, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-6", question = structure("Which of the following molecules CANNOT pass freely through the phospholipid bilayer by simple diffusion?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_1117a4f", 
-    option = "Oxygen", value = "Oxygen", label = structure("Oxygen", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-4", question = structure("Which of the following is an example of archaea?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_482c1f7", 
+    option = "Protozoa", value = "Protozoa", label = structure("Protozoa", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_afe9a70", 
-    option = "Carbon dioxide", value = "Carbon dioxide", label = structure("Carbon dioxide", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a33e6", 
+    option = "Pluribus", value = "Pluribus", label = structure("Pluribus", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_39c7c95", 
-    option = "Glucose", value = "Glucose", label = structure("Glucose", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ca2c0fa", 
+    option = "Extremophile", value = "Extremophile", label = structure("Extremophile", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a672b86", 
-    option = "Water", value = "Water", label = structure("Water", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4d4cb55", 
+    option = "Chromista", value = "Chromista", label = structure("Chromista", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_89a7434", 
+    option = "Alpha Bacterium", value = "Alpha Bacterium", label = structure("Alpha Bacterium", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -394,96 +352,30 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-6-answer", question = "test-6"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following molecules CANNOT pass freely through the phospholipid bilayer by simple diffusion?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-4-answer", question = "test-4"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following is an example of archaea?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 22416615.9895614, options = list()), class = c("learnr_radio", 
-"tutorial_question")), session = session)
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-7", question = structure("There are various types of cell junctions. One of which is is called a adherens junction. In which two cells are joined together by a cadherin molecule. What is the name of what is joined together by the cadherin?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_91fd9b7", 
-    option = "Actin bundles", value = "Actin bundles", label = structure("Actin bundles", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7489a46", 
-    option = "Myosin filaments", value = "Myosin filaments", 
-    label = structure("Myosin filaments", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_470e309", 
-    option = "Microtubules", value = "Microtubules", label = structure("Microtubules", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_af77457", 
-    option = "Intermediate filaments", value = "Intermediate filaments", 
-    label = structure("Intermediate filaments", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f05f38", 
-    option = "Phospholipid bilayer", value = "Phospholipid bilayer", 
-    label = structure("Phospholipid bilayer", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-7-answer", question = "test-7"), loading = structure("<strong>Loading:<\u002fstrong> \nThere are various types of cell junctions. One of which is is called a adherens junction. In which two cells are joined together by a cadherin molecule. What is the name of what is joined together by the cadherin?\n<br/><br/><br/>", html = TRUE, class = c("html", 
-"character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1619848770.7457, options = list()), class = c("learnr_radio", 
-"tutorial_question")), session = session)
-</script>
-
-
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-8", question = structure("Some inherited diseases are caused by mutations in the genes encoding ion channels.Select the ion channel associated with an inherited disorder of the heart beat (QT syndrome).", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_782146", 
-    option = "Chloride ion channel", value = "Chloride ion channel", 
-    label = structure("Chloride ion channel", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_db28952", 
-    option = "Sodium ion channel", value = "Sodium ion channel", 
-    label = structure("Sodium ion channel", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9021394", 
-    option = "Potassium ion channel", value = "Potassium ion channel", 
-    label = structure("Potassium ion channel", html = TRUE, class = c("html", 
-    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_81734b9", 
-    option = "Iron ion channel", value = "Iron ion channel", 
-    label = structure("Iron ion channel", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e98f4c2", 
-    option = "Magnesium ion channel", value = "Magnesium ion channel", 
-    label = structure("Magnesium ion channel", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
-"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
-"character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-8-answer", question = "test-8"), loading = structure("<strong>Loading:<\u002fstrong> \nSome inherited diseases are caused by mutations in the genes encoding ion channels.Select the ion channel associated with an inherited disorder of the heart beat (QT syndrome).\n<br/><br/><br/>", html = TRUE, class = c("html", 
-"character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 306940066.85707, options = list()), class = c("learnr_radio", 
+    seed = 1673075842.72091, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-9", question = structure("What is the function of spike proteins?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_9798577", 
-    option = "Help viruses enter a host cell", value = "Help viruses enter a host cell", 
-    label = structure("Help viruses enter a host cell", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-5", question = structure("Which of the following statements applies to bacterial reproduction?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_a4e6ca5", 
+    option = "They can produce spores that remain dormant for a long time", 
+    value = "They can produce spores that remain dormant for a long time", 
+    label = structure("They can produce spores that remain dormant for a long time", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ee843c7", 
+    option = "They mainly reproduce by meiosis", value = "They mainly reproduce by meiosis", 
+    label = structure("They mainly reproduce by meiosis", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_42f3be8", 
+    option = "They mainly reproduce by binary fission", value = "They mainly reproduce by binary fission", 
+    label = structure("They mainly reproduce by binary fission", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_6710080", 
-    option = "Help bacteria enter a host cell", value = "Help bacteria enter a host cell", 
-    label = structure("Help bacteria enter a host cell", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7ee9efb", 
-    option = "Help viruses attach to hosts ribosomes", value = "Help viruses attach to hosts ribosomes", 
-    label = structure("Help viruses attach to hosts ribosomes", html = TRUE, class = c("html", 
-    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e8e19db", 
-    option = "Help bacteria attach to hosts ribosomes", value = "Help bacteria attach to hosts ribosomes", 
-    label = structure("Help bacteria attach to hosts ribosomes", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d3dbfcd", 
+    option = "The daughter cells are genetically varied", value = "The daughter cells are genetically varied", 
+    label = structure("The daughter cells are genetically varied", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -491,29 +383,39 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-9-answer", question = "test-9"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the function of spike proteins?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-5-answer", question = "test-5"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following statements applies to bacterial reproduction?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 897978603.081846, options = list()), class = c("learnr_radio", 
+    seed = 1774893928.1735, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-10", question = structure("Which of the following is not a method of protein crystallization?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_167309a", 
-    option = "Hanging drop", value = "Hanging drop", label = structure("Hanging drop", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-6", question = structure("Vesicles are small spheres of membrane that transport materials throughout the cell. How do they move throughout the cell?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_5a4013f", 
+    option = "Vesicles move throughout the cell by the contraction of their flagellum.", 
+    value = "Vesicles move throughout the cell by the contraction of their flagellum.", 
+    label = structure("Vesicles move throughout the cell by the contraction of their flagellum.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4d93eae", 
-    option = "Sonication", value = "Sonication", label = structure("Sonication", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_76a4fb0", 
+    option = "Vesicles are pulled along microtubules by motor proteins.", 
+    value = "Vesicles are pulled along microtubules by motor proteins.", 
+    label = structure("Vesicles are pulled along microtubules by motor proteins.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bff3a66", 
-    option = "Sitting drop", value = "Sitting drop", label = structure("Sitting drop", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bec12", 
+    option = "Vesicles are pulled along actin-filaments by motor proteins.", 
+    value = "Vesicles are pulled along actin-filaments by motor proteins.", 
+    label = structure("Vesicles are pulled along actin-filaments by motor proteins.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_53957b", 
-    option = "Microdialysis", value = "Microdialysis", label = structure("Microdialysis", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f2aad18", 
+    option = "Vesicles are catapulted into the right direction by the golgi-apparatus", 
+    value = "Vesicles are catapulted into the right direction by the golgi-apparatus", 
+    label = structure("Vesicles are catapulted into the right direction by the golgi-apparatus", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8a47827", 
-    option = "Microbatch", value = "Microbatch", label = structure("Microbatch", html = TRUE, class = c("html", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_41a6a3f", 
+    option = "Vesicles bind to microtubules and travel along them by using ATP.", 
+    value = "Vesicles bind to microtubules and travel along them by using ATP.", 
+    label = structure("Vesicles bind to microtubules and travel along them by using ATP.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -521,9 +423,143 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "test-10-answer", question = "test-10"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following is not a method of protein crystallization?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "test-6-answer", question = "test-6"), loading = structure("<strong>Loading:<\u002fstrong> \nVesicles are small spheres of membrane that transport materials throughout the cell. How do they move throughout the cell?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1733537880.69276, options = list()), class = c("learnr_radio", 
+    seed = 1441964398.82853, options = list()), class = c("learnr_radio", 
+"tutorial_question")), session = session)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-7", question = structure("What cell junctions function is to prevent leakages?", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_a700d", 
+    option = "Gap junctions", value = "Gap junctions", label = structure("Gap junctions", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4235b45", 
+    option = "Adherens junction", value = "Adherens junction", 
+    label = structure("Adherens junction", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a97758", 
+    option = "Tight junction", value = "Tight junction", label = structure("Tight junction", html = TRUE, class = c("html", 
+    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ec0c29a", 
+    option = "Desmosome", value = "Desmosome", label = structure("Desmosome", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), message = NULL, post_message = NULL), ids = list(
+    answer = "test-7-answer", question = "test-7"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat cell junctions function is to prevent leakages?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+"character")), random_answer_order = FALSE, allow_retry = FALSE, 
+    seed = 144562485.932683, options = list()), class = c("learnr_radio", 
+"tutorial_question")), session = session)
+</script>
+
+
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-8", question = structure("Select which is true for desmosomes-", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_1e15ff3", 
+    option = "They bind cells tightly together to prevent the movement of extracellular fluid", 
+    value = "They bind cells tightly together to prevent the movement of extracellular fluid", 
+    label = structure("They bind cells tightly together to prevent the movement of extracellular fluid", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_13dfad7", 
+    option = "They cause adhesion between cells by using actin and cadherin", 
+    value = "They cause adhesion between cells by using actin and cadherin", 
+    label = structure("They cause adhesion between cells by using actin and cadherin", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_538b21f", 
+    option = "They causeadhesion between cells by using intermediate filaments and cadherin", 
+    value = "They causeadhesion between cells by using intermediate filaments and cadherin", 
+    label = structure("They causeadhesion between cells by using intermediate filaments and cadherin", html = TRUE, class = c("html", 
+    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_54c7e83", 
+    option = "They are used in cell communication and are formed by connexons", 
+    value = "They are used in cell communication and are formed by connexons", 
+    label = structure("They are used in cell communication and are formed by connexons", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_331aca0", 
+    option = "They create central tubules between cell walls", 
+    value = "They create central tubules between cell walls", 
+    label = structure("They create central tubules between cell walls", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), message = NULL, post_message = NULL), ids = list(
+    answer = "test-8-answer", question = "test-8"), loading = structure("<strong>Loading:<\u002fstrong> \nSelect which is true for desmosomes-\n<br/><br/><br/>", html = TRUE, class = c("html", 
+"character")), random_answer_order = FALSE, allow_retry = FALSE, 
+    seed = 991084733.53849, options = list()), class = c("learnr_radio", 
+"tutorial_question")), session = session)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-9", question = structure("Hydrothermal vents have many features that make it important and a possibility for why life is formed. Select the answer that is NOT a feature of hydrothermal vents.", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_a7c787c", 
+    option = "Can be used as a source of energy and minerals", 
+    value = "Can be used as a source of energy and minerals", 
+    label = structure("Can be used as a source of energy and minerals", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ebf84cf", 
+    option = "Has a moderately high temperature", value = "Has a moderately high temperature", 
+    label = structure("Has a moderately high temperature", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fea06", 
+    option = "Has a low pressure", value = "Has a low pressure", 
+    label = structure("Has a low pressure", html = TRUE, class = c("html", 
+    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_99e7005", 
+    option = "New minerals and H2are formed in particular Fe-S minerals", 
+    value = "New minerals and H2are formed in particular Fe-S minerals", 
+    label = structure("New minerals and H2are formed in particular Fe-S minerals", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), message = NULL, post_message = NULL), ids = list(
+    answer = "test-9-answer", question = "test-9"), loading = structure("<strong>Loading:<\u002fstrong> \nHydrothermal vents have many features that make it important and a possibility for why life is formed. Select the answer that is NOT a feature of hydrothermal vents.\n<br/><br/><br/>", html = TRUE, class = c("html", 
+"character")), random_answer_order = FALSE, allow_retry = FALSE, 
+    seed = 1100425585.98757, options = list()), class = c("learnr_radio", 
+"tutorial_question")), session = session)
+</script>
+
+
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "test-10", question = structure("What is the function of a tight junction", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_8dd4d19", 
+    option = "Seals neighbouring cells together to prevent leakage between cells. Formed by claudins and occludins. Important for forming barriers in the body - e.g. epithelia lining the digestive tract", 
+    value = "Seals neighbouring cells together to prevent leakage between cells. Formed by claudins and occludins. Important for forming barriers in the body - e.g. epithelia lining the digestive tract", 
+    label = structure("Seals neighbouring cells together to prevent leakage between cells. Formed by claudins and occludins. Important for forming barriers in the body - e.g. epithelia lining the digestive tract", html = TRUE, class = c("html", 
+    "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_77b66e0", 
+    option = "Joins actin bundles in one cell with actin bundles in a neighbouring cell. Formed by cadherin. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", 
+    value = "Joins actin bundles in one cell with actin bundles in a neighbouring cell. Formed by cadherin. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", 
+    label = structure("Joins actin bundles in one cell with actin bundles in a neighbouring cell. Formed by cadherin. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d57f818", 
+    option = "Similar to adherens junction but a different type of cadherin connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", 
+    value = "Similar to adherens junction but a different type of cadherin connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", 
+    label = structure("Similar to adherens junction but a different type of cadherin connects intermediate filaments from one cell with intermediate filaments from a neighbouring cell. Strong but flexible junctions - particularly important in tissues that need to stretch e.g. the stomach", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ef6386a", 
+    option = "Water filled channels that connect the cytoplasm of one cell with that of the neighbouring cell. Allow ions and small water-soluble molecules to move between cells. Formed by connexons. Important in tissues that need to be electrically coupled e.g. heart", 
+    value = "Water filled channels that connect the cytoplasm of one cell with that of the neighbouring cell. Allow ions and small water-soluble molecules to move between cells. Formed by connexons. Important in tissues that need to be electrically coupled e.g. heart", 
+    label = structure("Water filled channels that connect the cytoplasm of one cell with that of the neighbouring cell. Allow ions and small water-soluble molecules to move between cells. Formed by connexons. Important in tissues that need to be electrically coupled e.g. heart", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), message = NULL, post_message = NULL), ids = list(
+    answer = "test-10-answer", question = "test-10"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the function of a tight junction\n<br/><br/><br/>", html = TRUE, class = c("html", 
+"character")), random_answer_order = FALSE, allow_retry = FALSE, 
+    seed = 545089886.746173, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  <!--html_preserve-->
@@ -536,6 +572,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","cachem","checkmate","cli","compiler","curl","datasets","digest","ellipsis","evaluate","fastmap","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","LIFE101","lifecycle","magrittr","markdown","methods","mime","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","shiny","stats","stringi","stringr","tools","utils","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4.1","4.1.2","0.4.0","1.0.6","2.0.0","3.3.0","4.1.2","4.3.2","4.1.2","0.6.29","0.3.2","0.15","1.1.0","4.1.2","4.1.2","0.5.3","1.5.4","1.6.5","0.1.4","1.8.0","1.39","1.3.0","0.10.1.9019","0.1.0","1.0.1","2.0.3","1.1","4.1.2","0.12","1.2.0.1","2.5.1","1.0.9","1.0.4","2.11","2.0.2","0.13","0.4.2","1.7.2","4.1.2","1.7.8","1.4.1","4.1.2","4.1.2","2.5.0","0.31","1.8-4","2.3.5"]}]}]}
 </script>
 <!--/html_preserve-->
+</div>
 
 </div> <!-- topics -->
 
@@ -546,8 +583,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <!-- begin doc-metadata -->
 <div id="doc-metadata">
-<h2 class="title toc-ignore" style="display:none;">10 Quick Questions
-From LIFE101</h2>
+<h2 class="title toc-ignore" style="display:none;">10 Question Test</h2>
 </div>
 <!-- end doc-metadata -->
 

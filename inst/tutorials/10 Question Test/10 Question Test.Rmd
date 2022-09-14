@@ -2,26 +2,34 @@
 title: "10 Question Test"
 output: learnr::tutorial
 runtime: shiny_prerendered
+description: "Generate a quiz of 10 randomly selected questions from the LIFE101 module."
 ---
 
 ```{r setup, include=FALSE}
 library(learnr)
 library(LIFE101)
 knitr::opts_chunk$set(echo = FALSE)
+options(tutorial.storage = list(
+  save_object = function(...) { },
+  get_object = function(...) NULL,
+  get_objects = function(...) list(),
+  remove_all_objects = function(...) { }
+))
 data(questions)
 ```
 
+## How to use this tool
+
+Please note that questions are student written and not thoroughly checked for errors. As such, some questions may be unclear or contain mistakes. You are strongly encouraged to check your answers back against your notes and other course material. Not only will this be good revision as you will be forced to critically appraise the questions, but you can also report any suspected errors to the Module organiser at [cmitch@liv.ac.uk](mailto:cmitch@liv.ac.uk).
 
 ```{r}
 x <- questions[sample(nrow(questions),10),]
-
 y <- paste("quiz(caption = \"Ten questions\"",
            x$code[[1]],x$code[[2]],x$code[[3]],x$code[[4]],
            x$code[[5]],x$code[[6]],x$code[[7]],x$code[[8]],
            x$code[[9]],x$code[[10]],
            sep = ",")
 y <- paste(y,")")
-
 ```
 
 
