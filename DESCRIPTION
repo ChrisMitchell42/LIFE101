@@ -1,11 +1,10 @@
 Package: LIFE101
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Package to Generate Revision Quizzes for LIFE101
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Chris Mitchell
+Maintainer: The package maintainer <cmitch@liv.ac.uk>
+Description: This package comes packed with learnr tutorials which auto generate short quizzes from a large bank of student written questions.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

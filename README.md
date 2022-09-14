@@ -1,0 +1,37 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# LIFE101
+
+<!-- badges: start -->
+
+![](figures/101hex.png) <!-- badges: end -->
+
+The goal of the LIFE101 package is to provide a revision resource for
+our students. The package is based upon the hundreds of multiple choice
+questions written by our students over time. As this repository grows,
+this package will continue to add questions to its database.
+
+## Installation
+
+You can install the development version of LIFE101 from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ChrisMitchell42/LIFE101")
+```
+
+## How to use this package
+
+Once installed, you should be able to see some options appear in the
+‘Tutorial’ window of RStudio. You can simply select the appropriate
+tutorial from the list and click ‘Start Tutorial’. This will then
+generate a series of questions for you to answer.
+
+Alternatively, you can select a quiz by running the following code
+directly in R.
+
+``` r
+learnr::run_tutorial("10 Question Test", "LIFE101")
+```
