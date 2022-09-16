@@ -20,14 +20,17 @@ data(questions)
 
 ## How to use this tool
 
-Please note that questions are student written and not thoroughly checked for errors. As such, some questions may be unclear or contain mistakes. You are strongly encouraged to check your answers back against your notes and other course material. Not only will this be good revision as you will be forced to critically appraise the questions, but you can also report any suspected errors to the Module organiser at [cmitch@liv.ac.uk](mailto:cmitch@liv.ac.uk).
+Please note that questions are student written and not thoroughly checked for errors. As such, some questions may be unclear or contain mistakes. You are strongly encouraged to check your answers back against your notes and other course material. Not only will this be good revision as you will be forced to critically appraise the questions, but you can also report any suspected errors to the module organiser at [cmitch@liv.ac.uk](mailto:cmitch@liv.ac.uk).
+
+At the moment, this tool does not keep your score for you so if you want to track your score, you will need to do so manually. This feature will be added in a future version.
 
 ```{r}
 x <- questions[sample(nrow(questions),10),]
 y <- paste("quiz(caption = \"Ten questions\"",
            x$code[[1]],x$code[[2]],x$code[[3]],x$code[[4]],
            x$code[[5]],x$code[[6]],x$code[[7]],x$code[[8]],
-           x$code[[9]],x$code[[10]],
+           x$code[[9]],x$code[[10]], 
+           "random_answer_order = TRUE",
            sep = ",")
 y <- paste(y,")")
 ```
